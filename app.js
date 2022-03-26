@@ -1,9 +1,12 @@
 const express = require('express')
 require('dotenv').config()
 
+const PORT = process.env.PORT
+
 const app = express()
 
-const PORT = process.env.PORT
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 
 const start = async () => {
     try {

@@ -17,7 +17,9 @@
     "author": "Ilya Zaytsev",
     "license": "ISC",
     "dependencies": {
-        "express": "^4.17.3"
+        "express": "^4.17.3",
+        "knex": "^1.0.4",
+        "pg": "^8.7.3"
     },
     "devDependencies": {
         "concurrently": "^7.0.0",
