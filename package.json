@@ -1,0 +1,31 @@
+{
+    "name": "todor",
+    "version": "1.0.0",
+    "description": "Todo List",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app",
+        "server": "nodemon app",
+        "client": "npm run start --prefix client",
+        "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\"",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "author": "Ilya Zaytsev",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.3"
+    },
+    "devDependencies": {
+        "concurrently": "^7.0.0",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.0.0",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.7",
+        "nodemon": "^2.0.15",
+        "prettier": "2.6.1"
+    }
+}
