@@ -1,7 +1,7 @@
 {
     "name": "todor",
     "version": "1.0.0",
-    "description": "Todo List",
+    "description": "Just another Todo List",
     "main": "app.js",
     "scripts": {
         "start": "nodemon app",
@@ -9,7 +9,8 @@
         "client": "npm run start --prefix client",
         "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\"",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "migrate": "npx knex migrate:latest"
     },
     "lint-staged": {
         "**/*": "prettier --write --ignore-unknown"
